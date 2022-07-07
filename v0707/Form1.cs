@@ -12,10 +12,26 @@ namespace v0707
 {
     public partial class Form1 : Form
     {
+        int[] deta = new int[3];
+        static Random rand = Random();
         public Form1()
         {
+            
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            deta[0]=rand.Next(11);
+            deta[1] = rand.Next(11);
+            deta[2] = rand.Next(11);
+            MessageBox.Show($"{deta[0]}.{deta[1]}.{deta[2]}");
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int sum = deta[0] + deta[1] + deta[2];
+        }
     }
 }
